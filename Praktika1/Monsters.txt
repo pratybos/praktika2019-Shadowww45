@@ -1,0 +1,4 @@
+3
+Skeleton 20 2
+Bandit 15 3
+Zombie 10 4
