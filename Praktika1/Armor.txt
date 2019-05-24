@@ -1,0 +1,6 @@
+5
+Leather-Armor 10
+Iron-Armor 20
+Steel-Armor 30 
+Diamond-Armor 40
+Dragon-Armor 60

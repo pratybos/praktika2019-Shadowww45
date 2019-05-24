@@ -1,3 +1,3 @@
 ﻿  Praktika1.cpp
-c:\users\andrew\desktop\praktika1\praktika1.cpp(102): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
-  Praktika1.vcxproj -> C:\Users\Andrew\Desktop\Praktika1\Debug\Praktika1.exe
+c:\users\andrew\desktop\praktika2019-shadowww45\praktika1\praktika1.cpp(261): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+  Praktika1.vcxproj -> C:\Users\Andrew\Desktop\praktika2019-Shadowww45\Praktika1\Debug\Praktika1.exe

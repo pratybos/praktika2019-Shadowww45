@@ -1,0 +1,6 @@
+5
+Wooden-Sword 2
+Iron-Sword 5
+Steel-Sword 10
+Titanium-Sword 18
+Diamond-Sword 25

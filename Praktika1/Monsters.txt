@@ -1,4 +1,18 @@
-3
-Skeleton 20 2
-Bandit 15 3
-Zombie 10 4
+17
+Giant-Rat 5 1 2 1
+Lone-Wolf 10 2 6 3
+Goblin 7 2 4 2
+Skeleton 20 3 10 5
+Bandit 10 5 18 4
+Zombie 15 4 20 6
+Gargoyle 22 4 30 9
+Orc 25 5 25 11
+Troll 20 6 31 10
+Ogre 60 7 45 15
+Minotaur 25 15 53 18
+Grifon 30 10 65 20
+Demon 150 20 70 23
+Fallen-Angel 120 15 120 26
+Hell-Hound 80 25 80 22
+Dragon 300 40 400 31
+Spaghetti-Monster 1000 15 1 0
