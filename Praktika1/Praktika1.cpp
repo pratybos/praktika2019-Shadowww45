@@ -258,7 +258,8 @@ void EmenyCha(struct Monsters m[], COORD c)
 
 void Fight(struct Monsters m[], int b)
 {
-	srand(time(0));
+	random_device rd;
+	mt19937 gen(rd());
 	system("cls");
 		int Hp = m[b].HP;
 		int Escape = 0;
@@ -298,10 +299,12 @@ void Fight(struct Monsters m[], int b)
 			if (GetAsyncKeyState(VK_RETURN)) { // Enter key pressed
 				switch (fight) {
 				case 0: {//Attack
-					int a = rand() % m[0].Damage + dmg;
+					uniform_int_distribution<> dis(dmg, m[0].Damage);
+					int a = dis(gen);
 					gotoXY(55, 17); cout << "you damaged enemy by: " << a;
 					Hp = Hp - a;
-					int e = rand() % m[b].Damage + 0;
+					uniform_int_distribution<> dis(0, m[b].Damage);
+					int e = dis(gen);
 					gotoXY(55, 18); cout << "you were damaged by: " << e;
 					m[0].HP = m[0].HP - e;
 					break;
@@ -345,7 +348,8 @@ void Fight(struct Monsters m[], int b)
 									Inventory--;
 									Potions[1] -= 1;
 									gotoXY(55, 17); cout << "you healed yourself";
-									int e = rand() % m[b].Damage + 0;
+									uniform_int_distribution<> dis(0, m[b].Damage);
+									int e = dis(gen);
 									m[0].HP = m[0].HP - e;
 									gotoXY(55, 18); cout << "you were damaged by: " << e;
 								}
@@ -364,7 +368,8 @@ void Fight(struct Monsters m[], int b)
 									Inventory--;
 									Potions[3] -= 1;
 									gotoXY(55, 17); cout << "you healed yourself";
-									int e = rand() % m[b].Damage + 0;
+									uniform_int_distribution<> dis(0, m[b].Damage);
+									int e = dis(gen);
 									m[0].HP = m[0].HP - e;
 									gotoXY(55, 18); cout << "you were damaged by: " << e;
 								}
@@ -383,7 +388,8 @@ void Fight(struct Monsters m[], int b)
 									Inventory--;
 									Potions[5] -= 1;
 									gotoXY(55, 17); cout << "you healed yourself";
-									int e = rand() % m[b].Damage + 0;
+									uniform_int_distribution<> dis(0, m[b].Damage);
+									int e = dis(gen);
 									m[0].HP = m[0].HP - e;
 									gotoXY(55, 18); cout << "you were damaged by: " << e;
 								}
@@ -414,8 +420,9 @@ void Fight(struct Monsters m[], int b)
 						Sleep(500);
 					}
 					else if (r >= 4 && r <= 7) {
-						int e = rand() % m[b].Damage + 0;
-						m[0].HP = m[0].HP - (rand() % m[b].Damage + 0);
+						uniform_int_distribution<> dis(0, m[b].Damage);
+						int e = dis(gen);
+						m[0].HP = m[0].HP - e;
 						gotoXY(55, 17); cout << "During escape you were damaged by: " << e;
 						Escape++;
 						Sleep(500);
